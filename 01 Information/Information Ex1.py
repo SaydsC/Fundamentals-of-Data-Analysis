@@ -67,13 +67,13 @@ for i in range(len(chars)):
     # Print the character and how many times it appears in Alice in Wonderland.
     #print(f'{chars[i]}: {weights[i]}')
 
-# Start with space.
-    pairs = ' '
+# Start with space plus a
+    pairs = ' + a'
     N=1000
 # Do the following N-1 times.
 for i in range(1, N):
-    # Get the weights where the previous two character is the last character in twos.
-    wt = twoghts[pairs[-1]]
+    # Get the weights based on the previous 2 characters
+    wt = twoghts[pairs[-2]]
     # Turn wt into a list, ordered by chars.
     wt = [wt[c] for c in chars]
     # Randomly pick the next character using those weights.
